@@ -5,10 +5,10 @@ pipeline {
       steps {
         script { 
             if (env.BRANCH_NAME == '^(.*develop).*$') {
-                echo env.BRANCH_NAME
-                echo 'This is master branch'
+                echo 'This is develop branch'
             } else {
-                echo 'This is NOT master branch'
+                echo env.BRANCH_NAME
+                echo 'This is NOT develop branch'
             }
         }
       }
