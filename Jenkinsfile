@@ -4,7 +4,7 @@ pipeline {
     stage('Check branch name') {
       steps {
         script { 
-            if (env.BRANCH_NAME = 'master') {
+            if (env.BRANCH_NAME == 'master') {
                 echo env.BRANCH_NAME
                 echo 'This is master branch'
             } else {
