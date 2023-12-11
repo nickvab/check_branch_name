@@ -1,6 +1,5 @@
 pipeline {
   agent any
-  }
   stages {
     stage('Check branch name') {
       steps {
@@ -22,6 +21,5 @@ pipeline {
         echo ${BRANCH_NAME}
       }
     }
-  }
   }
 }
