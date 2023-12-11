@@ -16,10 +16,5 @@ pipeline {
         }
       }
     }
-    stage('Test') {
-      steps {
-        echo ${BRANCH_NAME}
-      }
-    }
   }
 }
