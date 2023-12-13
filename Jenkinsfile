@@ -13,5 +13,20 @@ pipeline {
         }
       }
     }
+    stage('Check tag') {                                              
+      steps {                                                       
+        echo 'some steps here that should always be executed'
+        script {                                                    
+          if (env.TAG_NAME) {                                       
+            echo "triggered by the TAG:"                                 
+            echo env.TAG_NAME                                       
+          } else {                                                  
+            echo "triggered by branch, PR or ..."                              
+          }                                                         
+        }                                                           
+      }                                                             
+    }
   }
 }
+
+
